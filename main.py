@@ -22,7 +22,8 @@ def main(request):
 
 def makeResponse(req):
     # create storage client
-    storage_client = storage.Client.from_service_account_json(SERVICE_ACCOUNT_JSON)
+    # storage_client = storage.Client.from_service_account_json(SERVICE_ACCOUNT_JSON)
+    storage_client = storage.Client()
     # get bucket with name
     bucket = storage_client.get_bucket(BUCKET_NAME)
     json_file = req.get("filename")
